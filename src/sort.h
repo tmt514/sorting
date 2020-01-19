@@ -37,4 +37,47 @@ class BubbleSort : public Sorter {
   static SorterFactoryRegistrar<Sorter, BubbleSort> _;
 };
 
+class InsertionSort : public Sorter {
+  public:
+  InsertionSort() : Sorter("Insertion Sort") {}
+  void Sort(vector<int> A);
+  static SorterFactoryRegistrar<Sorter, InsertionSort> _;
+  
+};
+
+class QuickSort : public Sorter {
+  public:
+  QuickSort() : Sorter("QuickSort") {}
+  void Sort(vector<int> A);
+  static SorterFactoryRegistrar<Sorter, QuickSort> _;
+};
+
+class HeapSort : public Sorter {
+  public:
+  HeapSort() : Sorter("HeapSort") {}
+  void Sort(vector<int> A);
+  static SorterFactoryRegistrar<Sorter, HeapSort> _;
+};
+
+class MergeSort : public Sorter {
+  public:
+  MergeSort() : Sorter("MergeSort") {}
+  void Sort(vector<int> A);
+  static SorterFactoryRegistrar<Sorter, MergeSort> _;
+};
+
+class IterativeMergeSort : public Sorter {
+  public:
+  IterativeMergeSort() : Sorter("IterativeMergeSort") {}
+  void Sort(vector<int> A);
+  static SorterFactoryRegistrar<Sorter, IterativeMergeSort> _;
+};
+
+class RadixSort : public Sorter {
+  public:
+  RadixSort() : Sorter("RadixSort") {}
+  void Sort(vector<int> A);
+  static SorterFactoryRegistrar<Sorter, RadixSort> _;
+};
+
 #endif  // __SORT_H__

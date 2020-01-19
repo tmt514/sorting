@@ -22,7 +22,7 @@ const string kHW = "\033[1;37m";
 
 int main(int argc, char* argv[]) {
   // 資料長度。
-  int N = 5000;
+  int N = 1000000;
 
   auto factory = GetSorterFactory<Sorter>();
   auto data_generator = DataGenerator();
@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
     double total_time = 0;
     int number_of_tests = 0;
     int testseed = 514;  // 固定一個 Seed，讓所有方法被測試到的測試資料相同。
-    while (total_time <= 2.0 && number_of_tests < 500) {
+    while (total_time <= 5.0 && number_of_tests < 500) {
       auto A = data_generator.GenerateRandomArray(testseed, N);
       auto start_time = clock();
       sorter->Sort(A);
