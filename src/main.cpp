@@ -6,8 +6,8 @@
 #include <string>
 #include <vector>
 #include "data_generator.h"
-#include "sort.h"
-#include "sorter_factory.h"
+#include "algorithms/sorter.h"
+#include "algorithms/sorter_factory.h"
 using std::cout;
 using std::endl;
 using std::fixed;
@@ -22,7 +22,7 @@ const string kHW = "\033[1;37m";
 
 int main(int argc, char* argv[]) {
   // 資料長度。
-  int N = 1000000;
+  int N = 100;
 
   auto factory = GetSorterFactory<Sorter>();
   auto data_generator = DataGenerator();
